@@ -23,8 +23,12 @@ public class MonHistoire {
 	marco.seFaireExtorquer();
 	marco.recevoir(15);
 	marco.boire();
-	
-	
+	System.out.println("");
+	Yakusa yaku = new Yakusa("Yaku Le Noir","whisky",4,"Warsong");
+	yaku.direBonjour();
+	yaku.parler("Tiens, tiens, ne serait-ce pas un faible marchand qui passe par là ?");
+	yaku.extorquer(marco);
+
 
 	}
 
