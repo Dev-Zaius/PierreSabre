@@ -28,7 +28,10 @@ public class MonHistoire {
 	yaku.direBonjour();
 	yaku.parler("Tiens, tiens, ne serait-ce pas un faible marchand qui passe par là ?");
 	yaku.extorquer(marco);
-
+	System.out.println("");
+	Ronin roro = new Ronin("Roro","shochu",60);
+	roro.direBonjour();
+	roro.donner(marco);
 
 	}
 

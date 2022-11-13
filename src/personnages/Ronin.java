@@ -10,7 +10,7 @@ public class Ronin extends Humain {
 	
 	public void donner(Commercant commercant) {
 		parler(commercant.getNom() + " prends ces " + this.argent /10 + " sous");
-		commercant.gagnerArgent(this.argent / 10);
+		commercant.recevoir(this.argent / 10);
 	}
 
 	public void provoquer(Yakusa yakuza) {
