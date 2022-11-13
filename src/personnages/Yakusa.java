@@ -34,5 +34,4 @@ public class Yakusa extends Humain{
 		this.parler("J’ai perdu mon duel et mes " + this.getArgent() + " sous, snif... J'ai déshonoré le clan des " + this.getClan());
 		return somme;
 	}
-	
 }
