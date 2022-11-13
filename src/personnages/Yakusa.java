@@ -24,7 +24,7 @@ public class Yakusa extends Humain{
 	}
 	
 	public void gagner(int gain) {
-		super.parler("Victoire !");
+		super.parler("Ce ronin pensait vraiment battre " + getNom() + " du clan des " + getClan()+ " ?\n Je l'ai dépouillé de ses " + gain + " sous.");
 		super.gagnerArgent(gain);
 		reputation++;
 	}
@@ -33,7 +33,7 @@ public class Yakusa extends Humain{
 		int somme = this.getArgent();
 		super.perdreArgent(this.getArgent());
 		reputation--;
-		this.parler("J’ai perdu mon duel et mes " + this.getArgent() + " sous, snif... J'ai déshonoré le clan des " + this.getClan());
+		this.parler("J’ai perdu mon duel et mes " + somme + " sous, snif... J'ai déshonoré le clan des " + this.getClan());
 		return somme;
 	}
 }
