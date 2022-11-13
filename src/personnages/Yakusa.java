@@ -5,13 +5,13 @@ public class Yakusa extends Humain{
 	private int reputation = 0;
 	public Yakusa(String nom, String boisson, int argent,String clan) {
 		super(nom, boisson, argent);
-		// TODO Auto-generated constructor stub
 		this.clan = clan;
 	}
 
 	public void extorquer(Commercant commercant) {
-		super.argent = commercant.seFaireExtorquer();
-		super.parler("Je viens d'extorquer ce malheureux : " + commercant.getNom());
+		int montant = commercant.seFaireExtorquer();
+		super.gagnerArgent(montant);
+		super.parler("J’ai piqué les " + montant + " sous de "+ commercant.getNom() + ", ce qui me fait " + getArgent() +" sous dans ma  poche. Hi ! Hi ! ");
 	}
 
 	public String getClan() {
@@ -21,15 +21,18 @@ public class Yakusa extends Humain{
 		return reputation;
 	}
 	
-	public void gagner() {
+	public void gagner(int gain) {
 		super.parler("Victoire !");
+		super.gagnerArgent(gain);
 		reputation++;
 	}
 	
 	public int perdre() {
-		int somme = super.getArgent();
-		super.setArgent(0);
+		int somme = this.getArgent();
+		super.perdreArgent(this.getArgent());
 		reputation--;
+		this.parler("J’ai perdu mon duel et mes " + this.getArgent() + " sous, snif... J'ai déshonoré le clan des " + this.getClan());
 		return somme;
 	}
+	
 }

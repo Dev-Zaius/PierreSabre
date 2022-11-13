@@ -1,5 +1,4 @@
 package personnages;
-
 public class Commercant extends Humain {
 	
 	public Commercant(String nom, int argent) {
@@ -8,11 +7,12 @@ public class Commercant extends Humain {
 	
 	public int seFaireExtorquer() {
 		int somme = super.getArgent();
-		super.setArgent(0);
+		this.perdreArgent(this.getArgent());
 		return somme;
 	}
 	
 	public void recevoir(int somme) {
-		setArgent(somme + getArgent());
+		this.recevoir(somme);
+		parler(somme + " sous ! Je te remercie généreux donateur!");
 	}
 }
