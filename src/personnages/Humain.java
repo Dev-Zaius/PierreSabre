@@ -4,11 +4,15 @@ public class Humain {
 	protected int argent;
 	private String boisson;
 	private String nom;
+	protected Humain[] memoire;
+	protected int nbConnaissance = 0 ;
+	
 	
 	public Humain(String nom,String boisson,int argent) {
 		this.nom = nom;
 		this.boisson = boisson;
 		this.argent = argent;
+		this.memoire = new Humain[30];
 	}
 	
 	public void parler(String texte) {
@@ -48,5 +52,38 @@ public class Humain {
 	
 	public void gagnerArgent(int somme) {
 		this.argent = somme + getArgent();
+	}
+	
+	public void faireConnaissanceAvec(Humain humain) {
+		direBonjour();
+		humain.direBonjour();
+		memoriser(humain);
+		humain.memoriser(this);
+	}
+	
+	public void listerConnaissance() {
+		String phrase = "";
+		String ponctuation ="";
+		for (int i = 0 ; i < nbConnaissance ; i++) {
+			if (i != nbConnaissance-1)
+				ponctuation = ", ";
+			else
+				ponctuation = "";
+			phrase = phrase + memoire[i].getNom() + ponctuation;
+		}
+		parler(" Je connais beaucoup de monde don : " + phrase);
+	}
+	
+	private void memoriser(Humain humain) {
+		if (nbConnaissance < 30) {
+				memoire[nbConnaissance] = humain;
+				nbConnaissance++;
+		}
+		else { // partie qui va oublier le plus ancien
+			for (int i = 0 ; i < nbConnaissance-1 ; i++) {
+				memoire[i] = memoire[i+1];
+			}
+			memoire[29] = humain;
+		}
 	}
 }
