@@ -36,6 +36,7 @@ public class Yakusa extends Humain{
 		this.parler("J’ai perdu mon duel et mes " + somme + " sous, snif... J'ai déshonoré le clan des " + this.getClan());
 		return somme;
 	}
+	
 	@Override
 	public void direBonjour() {
 		super.direBonjour();
