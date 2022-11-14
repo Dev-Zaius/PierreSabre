@@ -22,6 +22,18 @@ public class HistoireTP5 {
 		System.out.println("");
 		akimoto.faireConnaissanceAvec(marco);
 		akimoto.boire("thé");
+
+		System.out.println("");
+		Traitre masako = new Traitre("Miyamoto", "Masako", "whisky", 100);
+		masako.faireLeGentil();
+		masako.ranconner(kumi);
+		masako.ranconner(chonin);
+		masako.ranconner(marco);
+		akimoto.faireConnaissanceAvec(masako);
+		masako.ranconner(kumi);
+		masako.faireConnaissanceAvec(yaku);
+		masako.faireLeGentil();
+		masako.faireConnaissanceAvec(roro);
 	}
 
 }
