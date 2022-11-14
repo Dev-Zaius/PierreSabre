@@ -74,7 +74,7 @@ public class Humain {
 		parler(" Je connais beaucoup de monde don : " + phrase);
 	}
 	
-	private void memoriser(Humain humain) {
+	protected void memoriser(Humain humain) {
 		if (nbConnaissance < 30) {
 				memoire[nbConnaissance] = humain;
 				nbConnaissance++;

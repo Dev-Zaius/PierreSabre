@@ -24,6 +24,7 @@ public class Traitre extends Samourai{
 		}
 	}
 	
+	
 	public void faireLeGentil() {
 		if (nbConnaissance < 1) {
 			parler("Je ne peux faire ami ami avec personne car je ne connais personne ! Sif.");

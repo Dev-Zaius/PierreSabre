@@ -1,5 +1,10 @@
 package personnages;
 public class Commercant extends Humain {
+	private Yakusa testeur;
+	
+	public void bla() {
+		testeur.pourTester();
+	}
 	
 	public Commercant(String nom, int argent) {
 		super(nom,"thé", argent);

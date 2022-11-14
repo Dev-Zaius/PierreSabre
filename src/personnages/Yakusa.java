@@ -22,6 +22,9 @@ public class Yakusa extends Humain{
 	public int getReputation() {
 		return reputation;
 	}
+	protected void pourTester() {
+		return;
+	}
 	
 	public void gagner(int gain) {
 		super.parler("Ce ronin pensait vraiment battre " + getNom() + " du clan des " + getClan()+ " ?\n Je l'ai dépouillé de ses " + gain + " sous.");
