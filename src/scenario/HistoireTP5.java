@@ -1,6 +1,7 @@
 package scenario;
 import personnages.*;
 public class HistoireTP5 {
+
 	public static void main(String[] args) {
 		Commercant marco = new Commercant("Marco", 20);
 		Commercant chonin = new Commercant("Chonin", 40);
@@ -8,12 +9,17 @@ public class HistoireTP5 {
 		Yakusa yaku = new Yakusa("Yaku Le Noir", "whisky", 30, "Warsong");
 		Ronin roro = new Ronin("Roro", "shochu", 60);
 		Samourai akimoto = new Samourai("Miyamoto", "Akimoto", "saké", 80);
-		
+		Ronin fauxAkimoto = new Samourai("Miyamoto","fauxAkimoto","saké",80);
+
+		yaku.retour();
+		fauxAkimoto.direBonjour();
+
+		yaku.methodebidon("rouge");
 		marco.faireConnaissanceAvec(roro);
 		marco.faireConnaissanceAvec(yaku);
 		marco.faireConnaissanceAvec(chonin);
 		marco.faireConnaissanceAvec(kumi);
-
+		
 		marco.listerConnaissance();
 		roro.listerConnaissance();
 		yaku.listerConnaissance();

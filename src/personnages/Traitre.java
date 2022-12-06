@@ -3,11 +3,14 @@ import java.util.Random;
 
 public class Traitre extends Samourai{
 	private int niveauTraitrise;
+	int i;
 
 	public Traitre(String seigneur, String nom, String boisson, int argent) {
 		super(seigneur, nom, boisson, argent);
 		this.niveauTraitrise = 0;
 	}
+	
+	public void creerTest() {i = 1;}
 	
 	public void ranconner(Commercant commercant) {
 		if (niveauTraitrise < 3) {

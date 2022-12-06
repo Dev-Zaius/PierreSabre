@@ -2,12 +2,19 @@ package personnages;
 import java.util.Random;
 
 public class GrandMere extends Humain {
+	private Samourai monsamou = new Samourai("roi","samou","saké",15);
+	public static void main(String[] args) {
+		Traitre t = new Traitre("roi","rat","boire",14);
+		t.creerTest();
+		System.out.println("i="+t.i);
+	}
 
 	public GrandMere(String nom, int argent) {
 		super(nom, "tisane", argent);
 	}
 	
 	private String humainHasard(){
+		monsamou.protectednul();
 		return TypeHumain.flair();
 	}
 	@Override

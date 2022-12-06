@@ -11,6 +11,12 @@ public class Samourai extends Ronin{
 	public void boire(String boisson) {
 		parler("Qu'est-ce que je vais choisir comme boisson ? Tiens je vais prendre du " + boisson + ".");
 	}
+	private void nul() {
+		return;
+	}
+	protected void protectednul() {
+		return;
+	}
 
 
 	@Override
